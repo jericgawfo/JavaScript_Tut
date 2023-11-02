@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--/*
+    <button title="tooltip"
+    onclick="
+        alert('test alert')
+    ">
+        hello
+    </button>
+-->
+    <head>Cart Quantity</head>
+    <button onclick="
+        console.log('Cart Quantity: ' + Quantity);
+    ">Show Quantity</button>
+    <button onclick="
+        Quantity++;
+        console.log('Cart Quantity: ' + Quantity);
+    ">Add to Cart</button>
+    <button onclick="
+        Quantity = Quantity + 2;
+        console.log('Cart Quantity: ' + Quantity);
+    ">+2</button>
+    <button onclick="
+        Quantity = Quantity + 3;
+        console.log('Cart Quantity: ' + Quantity);
+    ">+3</button>
+    <button onclick="
+        Quantity = 0;
+        console.log('Cart Quantity: ' + Quantity);
+    ">Reset Cart</button>
+    <button onclick="
+        Quantity = Math.floor((Math.random() * 3) + 1);
+        console.log(Quantity);
+    ">TEst</button>
+    <script>
+        let Quantity = 0;
+    </script>
+</body>
+</html>
