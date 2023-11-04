@@ -113,31 +113,42 @@
         </tr>
     </table>
     <button onclick="
+        num1 = ''
+        num2 = '';
+        operator = null;
+        result = '';
         clearNums();
     ">CLEAR</button>
     <button onclick="
         if (operator === '/') {
-            console.log(parseFloat(num1) / parseFloat(num2));
+            //console.log(parseFloat(num1) / parseFloat(num2));
+            result = parseFloat(num1) / parseFloat(num2);
         }
         else if (operator === '*') {
-            console.log(parseFloat(num1) * parseFloat(num2));
+            // console.log(parseFloat(num1) * parseFloat(num2));
+            result = parseFloat(num1) * parseFloat(num2);
         }
         else if (operator === '-') {
-            console.log(parseFloat(num1) - parseFloat(num2));
+            // console.log(parseFloat(num1) - parseFloat(num2));
+            result = parseFloat(num1) - parseFloat(num2);
         }
         else if (operator === '+') {
-            console.log(parseFloat(num1) + parseFloat(num2));
+            // console.log(parseFloat(num1) + parseFloat(num2));
+            result = parseFloat(num1) + parseFloat(num2);
         }
-
+        
+        fetchResult();
         clearNums();
     ">=</button>
     <h1>Number1: <span id="num1"></span></h1>
     <h1>Operator: <span id="operator"></span></h1>
     <h1>Number2: <span id="num2"></span></h1>
+    <h1>Result: <span id="result"></span></h1>
     <script>
         let num1 = '';
         let num2 = '';
         let operator = null;
+        let result = '';
 
         function fetchNum1() {
             document.getElementById("num1").innerHTML = num1;
@@ -151,9 +162,14 @@
             document.getElementById("operator").innerHTML = operator;
         }
 
+        function fetchResult() {
+            document.getElementById("result").innerHTML = result;
+        }
+
         function clearNums() {
             num1 = '';
             num2 = '';
+            result = 0;
             operator = null;
         }
     </script>
