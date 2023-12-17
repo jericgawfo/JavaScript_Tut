@@ -7,9 +7,8 @@
 </head>
 <body>
     <button onclick="
-        let computerMove = pickComputerMove();
+        pickComputerMove();
 
-        let result = '';
         if (computerMove === 'Rock') {
             result = 'Tie.'
         }
@@ -23,9 +22,8 @@
         alert(`You picked Rock. Computer picked ${computerMove}. ${result}`);
     ">Rock</button>
     <button onclick="
-        let computerMove = pickComputerMove();
+        pickComputerMove();
 
-        let result = '';
         if (computerMove === 'Paper') {
             result = 'Tie.'
         }
@@ -39,8 +37,7 @@
         alert(`You picked Paper. Computer picked ${computerMove}. ${result}`)
     ">Paper</button>
     <button onclick="
-        let computerMove = pickComputerMove();
-        let result = '';
+        pickComputerMove();
 
         if (computerMove === 'Scissor') {
             result = 'Tie.'
@@ -55,9 +52,11 @@
         alert(`You picked Scissor. Computer picked ${computerMove}. ${result}`)
     ">Scissor</button>
     <script>
+        let computerMove = '';
+        let result = '';
+
         function pickComputerMove() {
             const randomNumber = Math.floor((Math.random() * 3) + 1);
-            let computerMove = '';
 
             if (randomNumber === 1) {
                 computerMove = 'Rock';

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race To Zero</title>
+</head>
+<body>
+    <h1>Race To Zero</h1>
+    <p><span id="result">25</span></p>
+
+    <button onclick="
+        numValue = 1;
+        result = parseInt(result) - parseInt(1);
+        getResult();
+        MoveAI(result);
+    ">1</button>
+
+    <button onclick="
+        numValue = 2;
+        result = parseInt(result) - parseInt(2);
+        getResult();
+        MoveAI(result);
+    ">2</button>
+
+    <button onclick="
+        console.log(Math.floor((Math.random() * 3) + 1));
+        numValue = 3;
+        result = parseInt(result) - parseInt(3);
+        getResult();
+        MoveAI(result);
+    ">3</button>
+
+    <script>
+        let result = 25;
+        let numValue = 0;
+        let numValueAI = 0;
+
+        function getResult() {
+            document.getElementById("result").innerHTML = result;
+            alert(`You picked ${numValue}. It's now AI turn.`)
+        }
+
+        function MoveAI(res) {
+            if (res == 24) {
+                numValueAI = 1;
+                res = res - numValueAI;
+            }       
+            else if (res == 23) {
+                numValueAI = Math.floor((Math.random() * 3) + 1);
+                res = res - numValueAI;
+            }
+            else if (res == 22) {
+                numValueAI = 3;
+                res = res - 3;
+            }
+            else if (res == 21) {
+                numValueAI = 2;
+                res = res - 2;
+            }
+            else if (res == 20) {
+                numValueAI = 1;
+                res = res = 1;
+            }
+            else if (res == 19) {
+                numValueAI = 3;
+                res = res - 3;
+            }
+            else if (res == 18) {
+                numValueAI = 2;
+                res = res - 2;
+            }
+            else if (res == 17) {
+                numValueAI = 1;
+                res = res - 1;
+            }
+            else if (res == 16) {
+                numValueAI = Math.floor((Math.random() * 3) + 1);
+                console.log("16 " + numValueAI)
+                res = res - numValueAI;
+            }
+            else if (res == 15) {
+                numValueAI = 3;
+                res = res - 3;
+            }
+            else if (res == 14) {
+                numValueAI = 2;
+                res = res - 2;
+            }
+            else if (res == 13) {
+                numValueAI = 1;
+                res = res - 1;
+            }
+            else if (res == 12) {
+                numValueAI = Math.floor((Math.random() * 3) + 1);
+                res = res - numValueAI;
+            }
+            else if (res == 11) {
+                numValueAI = 3;
+                res = res - numValueAI;
+            }
+            else if (res == 10) {
+                numValueAI = 2;
+                res = res - numValueAI;
+            }
+            else if (res == 9) {
+                numValueAI = 1;
+                res = rest - numValueAI;
+            }
+            else if (res == 8) {
+                numValueAI = Math.floor((Math.random() * 3) + 1);
+                res = res - numValueAI;
+            }
+            else if (res == 7) {
+                numValueAI = 3;
+                res = res - numValueAI;
+            }
+            else if (res == 6) {
+                numValueAI = 2;
+                res = res - 2;
+            }
+            else if (res == 5) {
+                numValueAI = 1;
+                res = res - 1;
+            }
+            else if (res == 4) {
+                numValueAI = Math.floor((Math.random() * 3) + 1);
+                res = res - numValueAI;
+            }
+            else if (res == 3) {
+                numValueAI = 3;
+                res = res - numValueAI;
+            }
+            else if (res == 2) {
+                numValueAI = 2;
+                res = res - 2;
+            }
+            else if (res == 1) {
+                numValueAI = 1;
+                res = res - 1
+            }
+            
+            document.getElementById("result").innerHTML = res;
+            alert(`AI picked ${numValueAI}. It's now your turn.`)
+        }
+    </script>
+</body>
+</html>
